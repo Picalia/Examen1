@@ -1,0 +1,11 @@
+{
+  "name": "app1",
+  "integrations": {},
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/v1",
+      "proxyUrl": 
+    }
+  ]
+}
