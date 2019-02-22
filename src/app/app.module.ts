@@ -12,6 +12,9 @@ import { BuscarPage } from '../pages/buscar/buscar';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FavPage } from '../pages/fav/fav';
 import { FavoritosProvider } from '../providers/favoritos/favoritos';
+import { CompusPage } from '../pages/compus/compus';
+import { MantePage } from '../pages/mante/mante';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { FavoritosProvider } from '../providers/favoritos/favoritos';
     InfoPage,
     BuscarPage,
     TabsPage,
-    FavPage
+    FavPage, 
+    CompusPage,
+    MantePage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,9 @@ import { FavoritosProvider } from '../providers/favoritos/favoritos';
     InfoPage,
     BuscarPage,
     TabsPage,
-    FavPage
+    FavPage, 
+    CompusPage,
+    MantePage
   ],
   providers: [
     StatusBar,

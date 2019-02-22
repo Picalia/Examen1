@@ -5,9 +5,12 @@
   Ionic pages and navigation.
 -->
 
-<ion-header>
+<ion-header >
+
 <ion-navbar>
-    <ion-title>Búsqueda</ion-title>
+    <ion-title>
+      <h2 style = "color: #8a9bab">Búsqueda</h2>
+    </ion-title>
   </ion-navbar>
 
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
@@ -15,10 +18,10 @@
 
 
 
-<ion-content padding>
+<ion-content padding style="background-color: #c9d1de"> 
 
     <ion-list>
-        <ion-item *ngFor = 'let  animal of items'>
+        <ion-item *ngFor = 'let  animal of items' style = "background-color: #f0dff2">
           <ion-thumbnail item-start>
             <img *ngIf = "animal.ad.hasOwnProperty('thumbnail')"
             src="https://img.segundamano.mx/cover/{{animal.ad.thumbnail.path}}">
@@ -39,8 +42,3 @@
 
 
 
-<ion-content padding>
-
-  
-
-</ion-content>

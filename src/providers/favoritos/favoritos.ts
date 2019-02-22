@@ -27,10 +27,11 @@ export class FavoritosProvider {
       this.favoritos.splice(index,1); 
 
       const toast = this.toastCtrl.create({
-        message: 'Tú mascota se desagregó correctamente de favoritos',
+        message: 'Tú elemento se desagregó correctamente de favoritos',
         duration: 3000,
         position: 'top' 
-    })
+    });
+    toast.present();
   
 }
   }
@@ -46,7 +47,7 @@ export class FavoritosProvider {
     this.favoritos.push(animal);
 
     const toast = this.toastCtrl.create({
-      message: 'Tú mascota se agregó correctamente a favoritos',
+      message: 'Tú elemento se agregó correctamente a favoritos',
       duration: 3000,
       position: 'top' 
     });

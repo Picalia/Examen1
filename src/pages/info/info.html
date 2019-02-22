@@ -6,21 +6,21 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title *ngIf = "animal.ad.hasOwnProperty('subject')"> {{animal.ad.subject}}</ion-title>
+    <ion-title *ngIf = "animal.ad.hasOwnProperty('subject')"> <h2 style = "color: #dbacdd">{{animal.ad.subject}}</h2></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style = "background-color: #feeff4">
 
-    <ion-card>
+    <ion-card style = "background-color: #eeecf3">
         <ion-slides pager  >
             <ion-slide *ngFor = "let img of imgs">
                 <img src = "https://img.segundamano.mx/medium/{{img.path}}">
             </ion-slide>
         </ion-slides>
       </ion-card>
-<ion-card>
-    <ion-item>
+<ion-card style = "background-color: #f0dff2">
+    <ion-item style = "background-color: #e8c4c4">
         {{animal.ad.subject}}
         <ion-icon *ngIf =  "!fav.existe(animal)" name = "heart"  item-end  (click) = "favoritos(animal)"></ion-icon>
         <ion-icon *ngIf =  "fav.existe(animal)" name = "heart" color = "danger" item-end  (click) = "fav.remove(animal)"></ion-icon>
@@ -41,7 +41,7 @@
 
 </ion-card>
 
-<ion-card>
+<ion-card style = "background-color:#f0dff2">
   <ion-col>
     <h2>VENDEDOR</h2>
     <P *ngIf= "animal.ad.hasOwnProperty('user')">Nombre: {{animal.ad.user.account.name}}</P>
@@ -49,9 +49,15 @@
   </ion-col>
 </ion-card>
 
-<ion-card>
+<ion-card style = "background-color: #f0dff2">
   <h2>DESCRIPCIÓN</h2>
   <P *ngIf= "animal.ad.hasOwnProperty('body')">{{animal.ad.body}}</P>
 </ion-card>
 
 </ion-content>
+
+
+
+
+
+

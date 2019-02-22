@@ -18,6 +18,7 @@ import { FavoritosProvider } from '../../providers/favoritos/favoritos';
 export class FavPage {
   items = [];
   infoPage= InfoPage;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fav: FavoritosProvider) {
     this.items = this.fav.getFavoritos();
@@ -28,7 +29,7 @@ export class FavPage {
   }
 
   Veranimal(animal){
-    sthis.navCtrl.push(this.infoPage, {animal: animal});
+    this.navCtrl.push(this.infoPage, {animal: animal});
   }
 
 }

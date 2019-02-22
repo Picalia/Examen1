@@ -1,20 +1,22 @@
-<ion-header>
+<ion-header style = "color: #b44663">
   <ion-toolbar>
     <ion-buttons end>
       <button ion-button icon-only (click) = "buscar()">
         <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Segunda mano +COTAS</ion-title>
+    <ion-title>
+    <h2 style = "color: #714d69"> +COTAS </h2>  
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style = "background-color: #968089">
   <ion-grid>
     <ion-row>
       <ion-col col-6 *ngFor = "let animal of animales">
-        <ion-card (click) = "Veranimal(animal)" >
+        <ion-card (click) = "Veranimal(animal)" style = "background-color: #e3c3d4">
           <ion-card-content>
           <img *ngIf = "animal.ad.hasOwnProperty('thumbnail')"
           src = "http://img.segundamano.mx/cover/{{animal.ad.thumbnail.path}}">

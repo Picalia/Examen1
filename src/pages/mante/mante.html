@@ -1,0 +1,40 @@
+<!--
+  Generated template for the MantePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click) = "buscar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> <h2 style = "color:  #e2664c">Mantenimiento & Remodelaciones</h2></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding style = "background-color: #ebd3cb">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor = "let mante of mantenimiento">
+        <ion-card (click) = "Vermante(mante)" >
+          <ion-card-content style = "background-color: #e9dce4">
+          <img *ngIf = "mante.ad.hasOwnProperty('thumbnail')"
+          src = "http://img.segundamano.mx/cover/{{mante.ad.thumbnail.path}}">
+          <img *ngIf = "!mante.ad.hasOwnProperty('thumbnail')"
+          src = "../assets/imgs/logo.png">
+          <h2 *ngIf = "mante.ad.hasOwnProperty('subject')"> {{mante.ad.subject}}</h2> 
+          <p *ngIf = "mante.ad.hasOwnProperty('locations')">
+              {{mante.ad.locations[0].locations[0].label}}, {{mante.ad.locations[0].label}}
+          </p>
+          <h1 *ngIf = "mante.ad.hasOwnProperty('list_price')"> {{mante.ad.list_price.label}}</h1>
+          <p *ngIf= "mante.ad.hasOwnProperty('list_time')"> Publicado el {{mante.ad.list_time.label}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -19,12 +19,16 @@ export class InfoPage {
 
   animal = {};
   imgs = [];
+  compu = {};
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fav: FavoritosProvider) {
     this.animal = this.navParams.get('animal')
     if(this.animal.ad.hasOwnProperty('images')){
      this.imgs = this.animal.ad.images; 
     }
+
+
   }
 
   ionViewDidLoad() {
